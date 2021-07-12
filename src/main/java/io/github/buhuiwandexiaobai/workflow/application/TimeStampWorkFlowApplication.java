@@ -18,7 +18,7 @@ public class TimeStampWorkFlowApplication {
         Date date = new Date(timeStamp);
         ResultItem item = ResultItem.ResultItemBuilder.aResultItem()
                 .setUid("0")
-                .setIcon("icon_0")
+                .setIcon("icon_0.png")
                 .setTitle(DATE_FORMAT.format(date))
                 .setSubtitle("timeStamp by buhuiwandexiaobai")
                 .setValid(false)
