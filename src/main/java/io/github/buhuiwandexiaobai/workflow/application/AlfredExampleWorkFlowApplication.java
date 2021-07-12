@@ -1,18 +1,24 @@
 package io.github.buhuiwandexiaobai.workflow.application;
 
+import java.util.Collections;
+import java.util.List;
+
 import io.github.buhuiwandexiaobai.workflow.model.ResultItem;
-import io.github.buhuiwandexiaobai.workflow.model.WorkFlow;
 
 /**
  * @author zhaobin
  * @date 2021/7/12 21:52
  */
-public class AlfredWorkFlowApplication {
+public class AlfredExampleWorkFlowApplication extends AbstractWorkFlowApplication{
     /**
      * just for example
-      * @param args
      */
     public static void main(String[] args) {
+        new AlfredExampleWorkFlowApplication().run(args);
+    }
+
+    @Override
+    protected List<ResultItem> getAllItems(String[] args) {
         ResultItem item = ResultItem.ResultItemBuilder.aResultItem()
                 .setArg("arg")
                 .setIcon("icon")
@@ -21,9 +27,6 @@ public class AlfredWorkFlowApplication {
                 .setSubtitle("subtitle")
                 .setValid(false)
                 .build();
-        WorkFlow workFlow = new WorkFlow();
-        workFlow.addItem(item);
-        workFlow.addItem(item);
-        System.out.println(workFlow);
+        return Collections.singletonList(item);
     }
 }

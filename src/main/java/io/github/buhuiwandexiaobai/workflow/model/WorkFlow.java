@@ -18,6 +18,10 @@ public class WorkFlow {
         items.add(item);
     }
 
+    public void addAllItems(List<ResultItem> items) {
+        this.items.addAll(items);
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
