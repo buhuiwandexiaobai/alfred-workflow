@@ -5,13 +5,16 @@ package io.github.buhuiwandexiaobai.workflow.model;
  * @date 2021/7/12 21:52
  */
 public class ResultItem {
+    // itemId 单个alfred应用需要保证唯一
     private String uid;
+    // 参数
     private String arg;
+    // 是否可以被执行
     private boolean valid;
     private String icon;
     private String title;
     private String subtitle;
-
+    private String type;
 
 
     public String getUid() {
@@ -38,12 +41,17 @@ public class ResultItem {
         return subtitle;
     }
 
+    public String getType() {
+        return type;
+    }
+
     @Override
     public String toString() {
         return "<item uid = \"" + uid + "\" arg = \"" + arg + "\">"
                 + "<title>" + title + "</title>"
                 + "<subtitle>" + subtitle + "</subtitle>"
                 + "<icon>" + icon + "</icon>"
+                + "<type>" + type + "</type>"
                 + "</item>";
     }
 
@@ -54,6 +62,7 @@ public class ResultItem {
         private String icon;
         private String title;
         private String subtitle;
+        private String type;
 
         private ResultItemBuilder() {
         }
@@ -69,6 +78,11 @@ public class ResultItem {
 
         public ResultItemBuilder setArg(String arg) {
             this.arg = arg;
+            return this;
+        }
+
+        public ResultItemBuilder setType(String type) {
+            this.type = type;
             return this;
         }
 
@@ -100,6 +114,7 @@ public class ResultItem {
             resultItem.uid = this.uid;
             resultItem.arg = this.arg;
             resultItem.subtitle = this.subtitle;
+            resultItem.type = this.type;
             return resultItem;
         }
     }

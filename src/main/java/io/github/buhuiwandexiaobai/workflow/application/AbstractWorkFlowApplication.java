@@ -12,6 +12,11 @@ import io.github.buhuiwandexiaobai.workflow.model.WorkFlow;
 public abstract class AbstractWorkFlowApplication {
 
 
+    /**
+     * see example at io.github.buhuiwandexiaobai.workflow.application.AbstractWorkFlowApplication
+     *
+     * @param args alfred输入参数
+     */
     public void run(String[] args) {
         WorkFlow workFlow = new WorkFlow();
         workFlow.addAllItems(getAllItems(args));
@@ -20,7 +25,6 @@ public abstract class AbstractWorkFlowApplication {
 
     /**
      * alfred 结果条目别表
-     *
-     * */
+     */
     protected abstract List<ResultItem> getAllItems(String[] args);
 }
