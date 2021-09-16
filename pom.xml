@@ -6,7 +6,7 @@
 
     <groupId>io.github.buhuiwandexiaobai</groupId>
     <artifactId>alfred-workflow</artifactId>
-    <version>1.0.7</version>
+    <version>1.0.8</version>
     <packaging>jar</packaging>
 
     <url>https://github.com/buhuiwandexiaobai/alfred-workflow</url>
@@ -30,6 +30,14 @@
         <url>http://github.com/buhuiwandexiaobai/alfred-workflow/tree/master</url>
         <tag>v1.0.4</tag>
     </scm>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.12.0</version>
+        </dependency>
+    </dependencies>
 
     <distributionManagement>
         <snapshotRepository>

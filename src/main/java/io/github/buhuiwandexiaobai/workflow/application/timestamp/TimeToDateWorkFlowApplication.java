@@ -1,5 +1,6 @@
 package io.github.buhuiwandexiaobai.workflow.application.timestamp;
 
+import static io.github.buhuiwandexiaobai.workflow.constant.AlfredWorkConstants.SUBTITLE;
 import static io.github.buhuiwandexiaobai.workflow.utils.NumberUtils.toLong;
 
 import java.util.Collections;
@@ -16,7 +17,6 @@ import io.github.buhuiwandexiaobai.workflow.utils.DataTimeUtils;
  */
 public class TimeToDateWorkFlowApplication extends AbstractWorkFlowApplication {
     private static final String UID = "0";
-    private static final String SUBTITLE = "timestamp by buhuiwandexiaobai";
 
     public static void main(String[] args) {
         new TimeToDateWorkFlowApplication().run(args);
